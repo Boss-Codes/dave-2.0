@@ -23,27 +23,27 @@ const client = new Client(process.env.TOKEN,{
     defaultImageSize: 2048
 });
 
-module.exports.callisto = callisto;
+module.exports.client = client;
 
 /* New collections for Commands/Events, etc */
-callisto.commands = new Collection(Command)
-callisto.aliases = new Collection();
-callisto.events = new Collection(); 
+client.commands = new Collection(Command)
+client.aliases = new Collection();
+client.events = new Collection(); 
 
 /* Command Handler */
-readdirSync(`./src/Commands/`).forEach(dir => { 
-    const commands = readdirSync(`./src/Commands/`).filter(file => file.endsWith('.js'))
+readdirSync(`./src/Modules/`).forEach(dir => { 
+    const commands = readdirSync(`./src/Modules/${dir}/`).filter(file => file.endsWith('.js'))
 
     for (let file of commands) { 
-        let pull = require(`./src/Commands/${file}`)
+        let pull = require(`./src/Modules/${dir}/${file}`)
         let CmdClass = new pull.cmd()
-        callisto.commands.add(CmdClass)
+        client.commands.add(CmdClass)
         
     }
     
 
 })
-console.log(`[Callisto] [${logDate}] Loaded Commands`)
+console.log(`[Moderation] [${logDate}] Loaded Commands`)
 
 /* Event Handler */ 
     const events = readdirSync(`./src/Events/`).filter(file => file.endsWith('.js')); 
@@ -51,7 +51,7 @@ console.log(`[Callisto] [${logDate}] Loaded Commands`)
         const evt = require(`./src/Events/${file}`)
     }; 
 
-console.log(`[Callisto] [${logDate}] Loaded Events`)
+console.log(`[Moderation] [${logDate}] Loaded Events`)
 
 /* Login */
 client.connect()
