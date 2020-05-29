@@ -19,7 +19,7 @@ class Help extends Command {
             return;
         }
         const infoCommands = client.commands.filter(c => c.module === 'Info');
-        const funCommands = client.commands.filter(c => c.module === 'Moderation')
+        const modCommands = client.commands.filter(c => c.module === 'Moderation')
         if (!args.length) {
         
         return client.createMessage(msg.channel.id, {
@@ -34,6 +34,10 @@ class Help extends Command {
                         name: 'Info', 
                         value: infoCommands.map(c => c.name).join(', ')
                     }, 
+                    { 
+                        name: 'Moderation', 
+                        value: modCommands.map(c => c.name).join(', ')
+                    } 
 
                     
                 ]
@@ -57,7 +61,11 @@ class Help extends Command {
                         {
                             name: 'Info', 
                             value: infoCommands.map(c => c.name).join(', ')
-                        }, 
+                        },
+                        { 
+                            name: 'Moderation', 
+                            value: modCommands.map(c => c.name).join(', ')
+                        } 
                         
                     ]
                   

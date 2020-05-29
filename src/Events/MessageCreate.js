@@ -6,9 +6,7 @@ client.on('messageCreate', async msg => {
     let prefix = '-'
     let devPrefix = '$'
 
-    if(!config.whitelistedGuilds.includes(msg.channel.guild.id)) { 
-        return;
-    }
+    
     if (msg.author.bot) return; 
     if(msg.content.startsWith(devPrefix) && msg.author.id === config.maintainers ? prefix = '$' : prefix = prefix)
     if(!msg.content.startsWith(prefix)) return
