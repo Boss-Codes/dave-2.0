@@ -20,9 +20,6 @@ class Mute extends Command {
      }
 
      async execute(client, msg, args) { 
-        if (!config.staff.includes(msg.member.id)) { 
-            return;
-        }
         if (!config.helpers.includes(msg.member.id)) return;
         if (!args.length) { 
             return client.createMessage(msg.channel.id, `${noUser}`)

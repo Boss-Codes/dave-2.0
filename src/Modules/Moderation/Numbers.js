@@ -16,8 +16,7 @@ class Id extends Command {
     }
 
     async execute(callisto, msg, args) { 
-        if (!config.staff.includes(msg.member.id)) return;
-                if (!config.helpers.includes(msg.member.id)) return;
+        if (!config.helpers.includes(msg.member.id)) return;
 
         const data = { 
             embed: { 
