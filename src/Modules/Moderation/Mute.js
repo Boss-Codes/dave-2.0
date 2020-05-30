@@ -155,7 +155,7 @@ class Mute extends Command {
                 }
             }
         }
-        member.addRole(muterole.id, `[${msg.member.username}#${msg.member.discriminator}] ${reason}`).then(() => 
+        member.addRole(muterole.id).then(() => 
         client.getDMChannel(member.id).then(c => c.createMessage(`You have been muted in ${msg.channel.guild.name} for: ${reason}`)))
                 await client.createMessage(msg.channel.id, `:thumbsup: muted for ${seconds} seconds`)
                     .catch(err => {
@@ -171,7 +171,7 @@ class Mute extends Command {
         }, ms(length)) */
 
         schedule.scheduleJob(`mute_time_${member.id}`, date, function() { 
-            member.removeRole(muterole.id, 'Automatic unmute')
+            member.removeRole(muterole.id)
             client.getDMChannel(member.id).then(c => c.createMessage(`You have been unmuted in ${msg.channel.guild.name}. Please take time to re-read over <#713872065316388874> again so you do not get muted once more.`))
             client.createMessage(config.modlogChannel, unmute)
            
