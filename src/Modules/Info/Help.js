@@ -74,7 +74,8 @@ class Help extends Command {
                 })
 
         } 
-        let desc = `**Description:** ${foundCommand.helpDetail}**Aliases:** ${foundCommand.aliases.join(', ')}\n**Usage:** ${foundCommand.helpUsage}`
+        let desc = `**Description:** ${foundCommand.helpDetail}\n**Usage:** ${foundCommand.helpUsage}`
+        if (foundCommand.aliases) desc = `**Description:** ${foundCommand.helpDetail}**Aliases:** ${foundCommand.aliases.join(', ')}\n**Usage:** ${foundCommand.helpUsage}`
         if (foundCommand.helpExample) desc = `**Description:** ${foundCommand.helpDetail}\n**Aliases:** ${foundCommand.aliases.join(', ')}\n**Usage:** ${foundCommand.helpUsage}\n**Examples:** ${foundCommand.helpExample}`
         return client.createMessage(msg.channel.id, {
             embed: { 
