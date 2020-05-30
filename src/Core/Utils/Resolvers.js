@@ -2,7 +2,7 @@ module.exports = {
     resolveUser: function(guild, msg, search) { 
         let member;
         if(msg.mentions.length){
-          member = guild.members.get(msg.mentions[0].id)
+          member = guild.members.get(msg.mentions[0])
            return member
         }
         
