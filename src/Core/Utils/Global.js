@@ -15,6 +15,7 @@ global.noRole = '<:callistoError:699782782519607317>Provide a role!'
 global.red = '16711680'
 global.yellow = '16770560'
 global.green = '1441536'
+global.blue = '30719'
 
 module.exports = { 
     version: global.version, 
@@ -32,5 +33,6 @@ module.exports = {
     noRole: global.noRole, 
     red: global.red, 
     yellow: global.yellow, 
-    green: global.green
+    green: global.green, 
+    blue: global.blue
 }

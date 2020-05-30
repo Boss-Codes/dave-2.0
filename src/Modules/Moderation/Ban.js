@@ -84,8 +84,7 @@ class Ban extends Command {
             embed: { 
                 color: red, 
                 footer: { 
-                    text: `${msg.member.username}#${msg.member.discriminator}`, 
-                    icon_url: `${msg.member.avatarURL}`
+                    text: `ID: ${member.id}`, 
                 }, 
                 timestamp: new Date, 
                 fields: [
@@ -105,7 +104,8 @@ class Ban extends Command {
                     }
                 ], 
                 author: { 
-                    name: 'Visionwise Community | Ban'
+                    name: `Ban | ${member.username}#${member.discriminator}`, 
+                    icon_url: member.avatarURL
                 }
             }
         }

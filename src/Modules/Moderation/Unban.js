@@ -9,6 +9,7 @@ class Unban extends Command {
          super({
              name: 'unban', 
              module: 'Moderation', 
+             aliases: ['ub'], 
 
              helpDetail: 'Unbans a user.', 
              helpUsage: '-unban @user [reason]',
@@ -17,7 +18,8 @@ class Unban extends Command {
      }
 
      async execute(client, msg, args) { 
-        
+        if (!config.staff.includes(msg.member.id)) return;
+
         if (!args.length) { 
             return client.createMessage(msg.channel.id, `${noUser}`)
         }
@@ -38,8 +40,7 @@ class Unban extends Command {
             embed: { 
                 color: green, 
                 footer: { 
-                    text: `${msg.member.username}#${msg.member.discriminator}`, 
-                    icon_url: `${msg.member.avatarURL}`
+                    text: `ID: ${banneduser}`, 
                 }, 
                 timestamp: new Date, 
                 fields: [
@@ -59,7 +60,7 @@ class Unban extends Command {
                     }
                 ], 
                 author: { 
-                    name: 'Visionwise Community | Unban'
+                    name: `Unban`, 
                 }
             }
         }

@@ -79,13 +79,12 @@ class Kick extends Command {
         if (reason === '13') { 
             reason = 'Underaged user.'
         }
-
+        
         const modlog = { 
             embed: { 
-                color: yellow, 
+                color: red, 
                 footer: { 
-                    text: `${msg.member.username}#${msg.member.discriminator}`, 
-                    icon_url: `${msg.member.avatarURL}`
+                    text: `ID: ${member.id}`, 
                 }, 
                 timestamp: new Date, 
                 fields: [
@@ -105,7 +104,8 @@ class Kick extends Command {
                     }
                 ], 
                 author: { 
-                    name: 'Visionwise Community | Kick'
+                    name: `Kick | ${member.username}#${member.discriminator}`, 
+                    icon_url: member.avatarURL
                 }
             }
         }

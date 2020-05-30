@@ -25,5 +25,5 @@ client.on('ready', async () => {
 
         
     })
-return console.log(`[Moderation] [${logTime}] Connected to Discord`)
+return console.log(`[Botski] [${logTime}] Connected to Discord`)
 })

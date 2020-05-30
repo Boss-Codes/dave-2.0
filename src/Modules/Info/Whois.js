@@ -79,22 +79,22 @@ class Whois extends Command {
         function userAcks(member) { 
             var ackArray = []
             if (member.id == '344954369285947392') { 
-                ackArray.push('Owner, Developer, Visionwise Community Moderator')
+                ackArray.push('Owner, Developer, Visionwise Community Admin')
             }
             if (member.id == '675460790467166238') { 
                 ackArray.push('Visionwise, OG')
             }
             if (member.id == '560944420959027220') { 
-                ackArray.push('Remmii, God Admin, Visionwise Community Admin') 
+                ackArray.push('Remmii, God Admin, Visionwise Co-owner') 
             }
             if (member.id == '702371016764031046') { 
-                ackArray.push('Visionwise Community Admin')
+                ackArray.push('Visionwise Community Manager')
             }      
             if (member.id == '522440031600771085') { 
-                ackArray.push('Visionwise Community Admin')
+                ackArray.push('Visionwise Community Manager')
             }
             if (member.id == '333713263160197130') { 
-                ackArray.push ('Visionwise Community Mod')
+                ackArray.push ('Visionwise Community Admin')
             }        
             if (member.id == '322996242521260042') { 
                 ackArray.push('Broken, Cutie')

@@ -43,7 +43,7 @@ readdirSync(`./src/Modules/`).forEach(dir => {
     
 
 })
-console.log(`[Moderation] [${logDate}] Loaded Commands`)
+console.log(`[Botski] [${logDate}] Loaded Commands`)
 
 /* Event Handler */ 
     const events = readdirSync(`./src/Events/`).filter(file => file.endsWith('.js')); 
@@ -51,7 +51,7 @@ console.log(`[Moderation] [${logDate}] Loaded Commands`)
         const evt = require(`./src/Events/${file}`)
     }; 
 
-console.log(`[Moderation] [${logDate}] Loaded Events`)
+console.log(`[Botski] [${logDate}] Loaded Events`)
 
 /* Login */
 client.connect()

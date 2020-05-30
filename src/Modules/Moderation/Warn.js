@@ -83,8 +83,7 @@ class Warn extends Command {
             embed: { 
                 color: yellow, 
                 footer: { 
-                    text: `${msg.member.username}#${msg.member.discriminator}`, 
-                    icon_url: `${msg.member.avatarURL}`
+                    text: `ID: ${member.id}`, 
                 }, 
                 timestamp: new Date, 
                 fields: [
@@ -104,7 +103,8 @@ class Warn extends Command {
                     }
                 ], 
                 author: { 
-                    name: 'Visionwise Community | Warn'
+                    name: `Warn | ${member.username}#${member.discriminator}`, 
+                    icon_url: member.avatarURL
                 }
             }
         }

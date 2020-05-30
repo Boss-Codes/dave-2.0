@@ -78,13 +78,11 @@ class Softban extends Command {
         if (reason === '13') { 
             reason = 'Underaged user.'
         }
-
         const modlog = { 
             embed: { 
                 color: red, 
                 footer: { 
-                    text: `${msg.member.username}#${msg.member.discriminator}`, 
-                    icon_url: `${msg.member.avatarURL}`
+                    text: `ID: ${member.id}`, 
                 }, 
                 timestamp: new Date, 
                 fields: [
@@ -104,7 +102,8 @@ class Softban extends Command {
                     }
                 ], 
                 author: { 
-                    name: 'Visionwise Community | Softban'
+                    name: `Softban | ${member.username}#${member.discriminator}`, 
+                    icon_url: member.avatarURL
                 }
             }
         }
