@@ -79,7 +79,7 @@ class Help extends Command {
         if (foundCommand.helpExample) desc = `**Description:** ${foundCommand.helpDetail}\n**Aliases:** ${foundCommand.aliases.join(', ')}\n**Usage:** ${foundCommand.helpUsage}\n**Examples:** ${foundCommand.helpExample}`
         return client.createMessage(msg.channel.id, {
             embed: { 
-                title: `Help: !${foundCommand.name}`,
+                title: `Help: -${foundCommand.name}`,
                 description: desc,
                 color: `${defaultColor}`,
                 footer: { 
