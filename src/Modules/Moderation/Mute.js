@@ -23,6 +23,7 @@ class Mute extends Command {
         if (!config.staff.includes(msg.member.id)) { 
             return;
         }
+        if (!config.helpers.includes(msg.member.id)) return;
         if (!args.length) { 
             return client.createMessage(msg.channel.id, `${noUser}`)
         }
@@ -163,12 +164,6 @@ class Mute extends Command {
                     });
 
                     client.createMessage(config.modlogChannel, modlog)
-
-        /* setTimeout(function(){
-            member.removeRole(muterole.id, 'Automatic unmute')
-            client.getDMChannel(member.id).then(c => c.createMessage(`You have been unmuted in ${msg.channel.guild.name}. Please take time to re-read over <#713872065316388874> again so you do not get muted once more.`))
-            client.createMessage('715780142844084244', unmute)
-        }, ms(length)) */
 
         schedule.scheduleJob(`mute_time_${member.id}`, date, function() { 
             member.removeRole(muterole.id)
