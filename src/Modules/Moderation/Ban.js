@@ -29,7 +29,7 @@ class Ban extends Command {
         let member = resolveUser(guild, msg, args.join(' ')); 
         
         if (!member) { 
-            let member = guild.members.get(search)
+            let member = guild.members.get(args.join(' '))
          }
          
         if (!member) { 

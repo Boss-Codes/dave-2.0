@@ -28,7 +28,7 @@ class Unmute extends Command {
         let guild = msg.member.guild; 
         let member = resolveUser(guild, msg, args.join(' ')); 
         if (!member) { 
-            let member = guild.members.get(search)
+            let member = guild.members.get(args.join(' '))
          }
         if (!member) { 
             return client.createMessage(msg.channel.id, `${userError}`)

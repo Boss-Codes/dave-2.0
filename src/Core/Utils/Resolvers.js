@@ -5,9 +5,7 @@ module.exports = {
           member = guild.members.get(msg.mentions[0].id)
            return member
         }
-        if (!member) { 
-           let member = guild.members.get(search)
-        }
+        
         if(!isNaN(search)) member = guild.members.get(search)
         if(isNaN(search)){
            member = guild.members.find(m => m.user.username.toLowerCase().startsWith(search.toLowerCase())) || 
