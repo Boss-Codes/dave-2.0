@@ -66,7 +66,7 @@ class Whois extends Command {
             if (member.permission.has('manageWebhooks')) { 
                 arrayOfPerms.push('Manage Webhooks')
             }
-            if (member.permission.has('manageMessage')) { 
+            if (member.permission.has('manageMessages')) { 
                 arrayOfPerms.push('Manage Messages')
             }
             if (member.permission.has('mentionEveryone')) { 
@@ -82,7 +82,7 @@ class Whois extends Command {
                 ackArray.push('Owner, Developer, Visionwise Community Admin')
             }
             if (member.id == '675460790467166238') { 
-                ackArray.push('Visionwise, OG')
+                ackArray.push('Visionwise, OG, CEO of stories')
             }
             if (member.id == '560944420959027220') { 
                 ackArray.push('Remmii, God Admin, Visionwise Co-owner') 
@@ -96,17 +96,17 @@ class Whois extends Command {
             if (member.id == '333713263160197130') { 
                 ackArray.push ('Visionwise Community Admin')
             }        
-            if (member.id == '322996242521260042') { 
-                ackArray.push('Broken, Cutie')
+            if (member.id == '347737792555646986') { 
+                ackArray.push('Visionwise Community Helper')
             }
-            if (member.id == '123261299864895489') { 
-                ackArray.push('K9QT, Sexy Beast, Two Doggy')
+            if (member.id == '334048987608907787') { 
+                ackArray.push('Visionwise Community Helper')
             }
-            if (member.id == '216860258071478275') { 
-                ackArray.push('🚚, Cutie')
+            if (member.id == '299746620956999681') { 
+                ackArray.push('Visionwise Community Helper')
             }
-            if (member.id == '334093318818627586') { 
-                ackArray.push('3.14, Cutie')
+            if (member.id == '277849991496859648') { 
+                ackArray.push('Visionwise Community Helper')
             }
             if (member.id == '77205340050956288') { 
                 ackArray.push('Designer, Hot Pug, Cutie')
