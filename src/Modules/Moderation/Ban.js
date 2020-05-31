@@ -120,7 +120,7 @@ class Ban extends Command {
                         if (err) return message.channel.send(`${error}An error has occured! Please contact boss with the error: ${err}`)
                     });
 
-                    client.createMessage("716158323161825420", modlog)
+                    client.createMessage(config.modlogChannel, modlog)
 
      }
 }
