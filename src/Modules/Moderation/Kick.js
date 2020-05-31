@@ -1,5 +1,5 @@
 const { Command } = require('../../Core/Classes/Command.js'); 
-const { yellow, userError, noUser, error } = require('../../Core/Utils/Global.js'); 
+const { red, userError, noUser, error } = require('../../Core/Utils/Global.js'); 
 const { resolveUser } = require('../../Core/Utils/Resolvers.js'); 
 const config = require('../../../config.json'); 
 const { stripIndents } = require('common-tags'); 
