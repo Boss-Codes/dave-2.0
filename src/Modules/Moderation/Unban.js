@@ -17,60 +17,59 @@ class Unban extends Command {
          })
      }
 
-     async execute(client, msg, args) { 
-        if (!config.staff.includes(msg.member.id)) return;
+     async execute(client, msg, args) {
+         if (!config.staff.includes(msg.member.id)) return;
 
-        if (!args.length) { 
-            return client.createMessage(msg.channel.id, `${noUser}`)
-        }
+         if (!args.length) {
+             return client.createMessage(msg.channel.id, `${noUser}`)
+         }
 
-        let banneduser = args[0]
+         let banneduser = args[0]
 
-        if (!banneduser) { 
-            return client.createMessage(msg.channel.id, `${userError}`)
-        }
-        
+         if (!banneduser) {
+             return client.createMessage(msg.channel.id, `${userError}`)
+         }
 
-        let reason = args.slice(1).join(' ');
-        if (!reason) { 
-            reason = 'No reason provided.'
-        }
 
-        const modlog = { 
-            embed: { 
-                color: green, 
-                footer: { 
-                    text: `ID: ${banneduser}`, 
-                }, 
-                timestamp: new Date, 
-                fields: [
-                    { 
-                        name: 'User', 
-                        value: `<@${banneduser}> (${banneduser})`, 
-                        inline: true
-                    },
-                    { 
-                        name: 'Moderator', 
-                        value: `${msg.member.username}#${msg.member.discriminator}`, 
-                        inline: true
-                    }, 
-                    { 
-                        name: 'Reason', 
-                        value: reason
-                    }
-                ], 
-                author: { 
-                    name: `Unban`, 
-                }
-            }
-        }
-                msg.channel.guild.unbanMember(banneduser, `${reason}`)
-                await client.createMessage(msg.channel.id, ':thumbsup:')
-                    .catch(err => {
-                        if (err) return message.channel.send(`${error}An error has occured! Please contact boss with the error: ${err}`)
-                    });
+         let reason = args.slice(1).join(' ');
+         if (!reason) {
+             reason = 'No reason provided.'
+         }
 
-                    client.createMessage(config.modlogChannel, modlog)
+         const modlog = {
+             embed: {
+                 color: green,
+                 footer: {
+                     text: `ID: ${banneduser}`,
+                 },
+                 timestamp: new Date,
+                 fields: [{
+                         name: 'User',
+                         value: `<@${banneduser}> (${banneduser})`,
+                         inline: true
+                     },
+                     {
+                         name: 'Moderator',
+                         value: `${msg.member.username}#${msg.member.discriminator}`,
+                         inline: true
+                     },
+                     {
+                         name: 'Reason',
+                         value: reason
+                     }
+                 ],
+                 author: {
+                     name: `Unban`,
+                 }
+             }
+         }
+         msg.channel.guild.unbanMember(banneduser, `${reason}`)
+         await client.createMessage(msg.channel.id, ':thumbsup:')
+             .catch(err => {
+                 if (err) return message.channel.send(`${error}An error has occured! Please contact boss with the error: ${err}`)
+             });
+
+         client.createMessage(config.modlogChannel, modlog)
 
      }
 }

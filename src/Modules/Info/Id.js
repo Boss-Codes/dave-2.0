@@ -16,16 +16,16 @@ class Id extends Command {
         })
     }
 
-    async execute(callisto, msg, args) { 
-        if (!config.whitelistedChannels.includes(msg.channel.id)) { 
+    async execute(callisto, msg, args) {
+        if (!config.whitelistedChannels.includes(msg.channel.id)) {
             return;
         }
         const guild = msg.member.guild
-        let member = resolveUser(guild, msg, args.join(' ')); 
-        if (!member) { 
+        let member = resolveUser(guild, msg, args.join(' '));
+        if (!member) {
             member = msg.member
         }
         callisto.createMessage(msg.channel.id, `${member.username}'s ID is \`${member.id}\``)
     }
-}
-module.exports.cmd = Id;
+    }
+    module.exports.cmd = Id;

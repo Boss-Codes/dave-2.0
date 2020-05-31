@@ -1,5 +1,5 @@
-module.exports = { 
-    formatDate: function(date) { 
+module.exports = {
+    formatDate: function (date) {
         return new Intl.DateTimeFormat('en-us').format(date)
     }
 

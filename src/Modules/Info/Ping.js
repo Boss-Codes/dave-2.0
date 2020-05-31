@@ -14,17 +14,17 @@ class Ping extends Command {
         });
     }
 
-    async execute(client, msg) { 
-        if (!config.whitelistedChannels.includes(msg.channel.id)) { 
+    async execute(client, msg) {
+        if (!config.whitelistedChannels.includes(msg.channel.id)) {
             return;
         }
-        let time = Date.now(); 
-        let m = await client.createMessage(msg.channel.id, 'Pong!'); 
+        let time = Date.now();
+        let m = await client.createMessage(msg.channel.id, 'Pong!');
         let now = Date.now()
         m.edit(`Pong! \`${now - time}ms\``)
 
     }
 
-}
+    }
 
-module.exports.cmd = Ping;
+    module.exports.cmd = Ping;

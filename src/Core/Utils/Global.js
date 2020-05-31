@@ -17,22 +17,22 @@ global.yellow = '16770560'
 global.green = '1441536'
 global.blue = '30719'
 
-module.exports = { 
-    version: global.version, 
+module.exports = {
+    version: global.version,
     modules: global.modules,
-    success: global.success, 
-    error: global.error, 
-    online: global.online, 
+    success: global.success,
+    error: global.error,
+    online: global.online,
     idle: global.idle,
     dnd: global.dnd,
-    offline: global, 
+    offline: global,
     defaultColor: global.defaultColor,
     userError: global.userError,
-    roleError: global.roleError, 
-    noUser: global.noUser, 
-    noRole: global.noRole, 
-    red: global.red, 
-    yellow: global.yellow, 
-    green: global.green, 
+    roleError: global.roleError,
+    noUser: global.noUser,
+    noRole: global.noRole,
+    red: global.red,
+    yellow: global.yellow,
+    green: global.green,
     blue: global.blue
 }
