@@ -3,7 +3,7 @@ const config = require('../../config.json')
 
 client.on('messageCreate', async msg => {
 
-                let prefix = '-'
+                let prefix = '!'
                 let devPrefix = '$'
 
 
