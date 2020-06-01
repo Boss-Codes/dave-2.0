@@ -7,7 +7,7 @@ client.on('messageUpdate', async (message, oldMessage) => {
     const log = {
         embed: {
             author: {
-                name: 'Message Delete'
+                name: 'Message Edit'
             },
             timestamp: new Date,
             color: blue,
