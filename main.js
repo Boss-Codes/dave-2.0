@@ -18,7 +18,7 @@ const client = new Client(process.env.TOKEN,{
     getAllUsers: true, 
     messageLimit: 100,
     restMode: true, 
-    autoreconnect: false, 
+    autoreconnect: true, 
     defaultImageFormat: 'png', 
     defaultImageSize: 2048
 });
