@@ -22,6 +22,6 @@ client.on('guildMemberRemove', async (guild, member) => {
     }
 
     client.createMessage(config.logChannel, log)
-    client.createMessage('697676542830182431', `Goodbye, **${member.username}#${member.discriminator}**!`)
+    client.createMessage('713872016788291604', `Goodbye, **${member.username}#${member.discriminator}**!`)
 
 })
