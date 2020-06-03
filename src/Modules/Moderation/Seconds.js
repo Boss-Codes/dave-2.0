@@ -17,7 +17,7 @@ class Id extends Command {
 
     async execute(callisto, msg, args) {
         if (!config.helpers.includes(msg.member.id)) return;
-        const arguments = args[0]; 
+        const input = args[0]; 
 
         const seconds = arguments * 60
         callisto.createMessage(msg.channel.id, seconds)
