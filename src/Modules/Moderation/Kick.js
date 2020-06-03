@@ -42,43 +42,49 @@ async execute(client, msg, args) {
     }
 
     if (reason === '1') {
-        reason = 'Racial slurs.'
+        reason = 'Copypasta/spam.'
     }
     if (reason === '2') {
-        reason = 'NSFW content.'
+        reason = 'Self promotion outside of <#713876168721301566>.'
     }
     if (reason === '3') {
-        reason = 'Self promotion outside of <#713876168721301566>'
+        reason = 'Uselessly tagging members/staff.'
     }
     if (reason === '4') {
-        reason = 'Spamming characters/flooding chat.'
+        reason = 'NSFW.'
     }
     if (reason === '5') {
-        reason = 'Staff disrespect.'
+        reason = 'Misusing exploits.'
     }
     if (reason === '6') {
-        reason = 'Arguing with members/staff.'
+        reason = 'Racial slurs/discriminatory terminology.'
     }
     if (reason === '7') {
-        reason = 'Spamming/uselessly tagging staff members.'
+        reason = 'Impersonation.'
     }
     if (reason === '8') {
-        reason = 'Excessive swearing.'
+        reason = 'Drama/overly sensitive topiced conversations.'
     }
     if (reason === '9') {
-        reason = 'Joking about DDoSing, S.W.A.Ting or DOXing people.'
+        reason = 'Mini-modding.'
     }
-    if (reason === '10') {
+    if (reason === '-bc') {
         reason = 'Bot commands in <#713873296680288266>.'
     }
+    if (reason === '10') {
+        reason = 'Harassments/threats.'
+    }
     if (reason === '11') {
-        reason = 'Spreading false information and rumors.'
+        reason = 'Illegal conversation participation.'
     }
     if (reason === '12') {
-        reason = 'Threatening/blackmailing users.'
+        reason = 'Trolling.'
     }
-    if (reason === '13') {
-        reason = 'Underaged user.'
+    if (reason === '-underage') { 
+            reason = 'Underaged user.'
+        }
+    if (reason === '13') { 
+        reason = 'Making users feel uncomfortable.'
     }
 
     const modlog = {

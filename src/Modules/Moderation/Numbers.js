@@ -9,7 +9,7 @@ class Id extends Command {
             name: 'numbers', 
             module: 'Moderation', 
 
-            userperms: 'User',
+            userperms: 'Moderator',
             helpDetail: 'Sends rule numbers for mod commands.', 
             helpUsage: 'numbers', 
         })
@@ -20,7 +20,7 @@ class Id extends Command {
 
         const data = {
             embed: {
-                description: `1: Racial slurs.\n2: NSFW content.\n3: Self promotion outside of <#713876168721301566>\n4: Spamming characterse/flooding channels.\n5: Staff disrespect.\n6: Arguing with members/staff.\n7: Spamming/uselessy tagging staff members.\n8: Excessive swearing.\n9: Joking about DDoSing, S.W.A.Ting, or DOXing people.\n10: Bot commands in <#713873296680288266>\n11: Spreading false information and rumors.\n12: Threatening/blackmailing users.\n13: Underaged user.`,
+                description: `1: Spam/copypasta.\n2: Ads outside of <#713876168721301566>.\n3: Uselessly tagging members/staff.\n4: NSFW.\n5: Abusing exploits..\n6: Racial slurs/discriminatory terminology..\n7: Impersonation.\n8: Causing drama/controversial topic dicussion.\n9: Mini-modding.\n10: Harassment/threats.\n11: Illegal conversations.\n12: Trolling.\n13: Making users feel uncomfortable\n-underage Underaged user.\n-bc: Bot commands in <#713873296680288266>.`,
                 author: {
                     name: 'Moderation Command Reason Numbers'
                 },
