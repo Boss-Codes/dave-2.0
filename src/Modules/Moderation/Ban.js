@@ -118,8 +118,7 @@ async execute(client, msg, args) {
             }
         }
     }
-    client.getDMChannel(member.id).then(c => c.createMessage(`You have been banned in ${msg.channel.guild.name} for: ${reason}`)).then(() =>
-        member.ban(1, `[${msg.member.username}#${msg.member.discriminator}] ${reason}`))
+    member.ban(1, `[${msg.member.username}#${msg.member.discriminator}] ${reason}`)
     await client.createMessage(msg.channel.id, ':thumbsup:')
         .catch(err => {
             if (err) return message.channel.send(`${error}An error has occured! Please contact boss with the error: ${err}`)
