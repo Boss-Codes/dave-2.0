@@ -19,7 +19,7 @@ class Id extends Command {
         if (!config.helpers.includes(msg.member.id)) return;
         const input = args[0]; 
 
-        const seconds = arguments * 60
+        const seconds = input * 60
         callisto.createMessage(msg.channel.id, seconds)
     }
     }
