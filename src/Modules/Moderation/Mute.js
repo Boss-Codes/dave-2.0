@@ -160,7 +160,7 @@ class Mute extends Command {
          }
          try { 
             client.getDMChannel(member.id).then(x => x.createMessage(`You have been muted in ${guild.name} for: ${reason}`))
-            member.addRole(muterole.id `[${msg.member.username}#${msg.member.discriminator}] ${reason}`)
+            member.addRole(muterole.id)
             await client.createMessage(msg.channel.id, ':thumbsup:')
             await client.createMessage(config.modlogChannel, modlog)
             .catch(err => {

@@ -116,7 +116,6 @@ class Warn extends Command {
          }
          try { 
             client.getDMChannel(member.id).then(x => x.createMessage(`You have been warned in ${guild.name} for: ${reason}`))
-            member.addRole(muterole.id `[${msg.member.username}#${msg.member.discriminator}] ${reason}`)
             await client.createMessage(msg.channel.id, ':thumbsup:')
             await client.createMessage(config.modlogChannel, modlog)
             .catch(err => {
