@@ -122,13 +122,13 @@ async execute(client, msg, args) {
         client.getDMChannel(member.id).then(x => x.createMessage(`You have been banned in ${guild.name} for: ${reason}\nIf you think your ban was unjust or you did not deserve it, submit an appeal by using this form: https://forms.gle/qjoVCkKg47XvyKUb9`))
         member.ban(1, `[${msg.member.username}#${msg.member.discriminator}] ${reason}`)
         await client.createMessage(msg.channel.id, ':thumbsup:')
-        await client.createMessage('697676542830182431', modlog)
+        await client.createMessage(config.modlogChannel, modlog)
         .catch(err => {
             if (err) return message.channel.send(`${error}An error has occured! Please contact boss with the error: ${err}`)
         });
     } catch { 
         member.ban(1, `[${msg.member.username}#${msg.member.discriminator}] ${reason}`) 
-        await client.createMessage('697676542830182431', modlog)
+        await client.createMessage(config.modlogChannel, modlog)
     }
     
 }
