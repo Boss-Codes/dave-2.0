@@ -122,8 +122,8 @@ class Warn extends Command {
             .catch(err => {
                 if (err) return message.channel.send(`${error}An error has occured! Please contact boss with the error: ${err}`)
             });
-        } catch (error) { 
-            member.kick(`[${msg.member.username}#${msg.member.discriminator}] ${reason}`) 
+        } catch { 
+            await client.createMessage(msg.channel.id, ':thumbsup:')
             await client.createMessage(config.modlogChannel, modlog)
         }
      }

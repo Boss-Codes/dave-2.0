@@ -128,6 +128,7 @@ async execute(client, msg, args) {
         });
     } catch { 
         member.ban(1, `[${msg.member.username}#${msg.member.discriminator}] ${reason}`) 
+        await client.createMessage(msg.channel.id, ':thumbsup:')
         await client.createMessage(config.modlogChannel, modlog)
     }
     
