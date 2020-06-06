@@ -115,14 +115,18 @@ async execute(client, msg, args) {
             }
         }
     }
-    client.getDMChannel(member.id).then(c => c.createMessage(`You have been kicked in ${msg.channel.guild.name} for: ${reason}`)).then(() =>
-        member.kick(1, `[${msg.member.username}#${msg.member.discriminator}] ${reason}`))
-    await client.createMessage(msg.channel.id, ':thumbsup:')
+    try { 
+        client.getDMChannel(member.id).then(x => x.createMessage(`You have been kicked in ${guild.name} for: ${reason}`))
+        member.kick(`[${msg.member.username}#${msg.member.discriminator}] ${reason}`)
+        await client.createMessage(msg.channel.id, ':thumbsup:')
+        await client.createMessage(config.modlogChannel, modlog)
         .catch(err => {
             if (err) return message.channel.send(`${error}An error has occured! Please contact boss with the error: ${err}`)
         });
-
-    client.createMessage(config.modlogChannel, modlog)
+    } catch (error) { 
+        member.kick(`[${msg.member.username}#${msg.member.discriminator}] ${reason}`) 
+        await client.createMessage(config.modlogChannel, modlog)
+    }
 
 }
 }

@@ -158,14 +158,18 @@ class Mute extends Command {
                  }
              }
          }
-         member.addRole(muterole.id).then(() =>
-             client.getDMChannel(member.id).then(c => c.createMessage(`You have been muted in ${msg.channel.guild.name} for: ${reason}`)))
-         await client.createMessage(msg.channel.id, `:thumbsup: muted for ${seconds} seconds`)
-             .catch(err => {
-                 if (err) return message.channel.send(`${error}An error has occured! Please contact boss with the error: ${err}`)
-             });
-
-         client.createMessage(config.modlogChannel, modlog)
+         try { 
+            client.getDMChannel(member.id).then(x => x.createMessage(`You have been muted in ${guild.name} for: ${reason}`))
+            member.addRole(muterole.id `[${msg.member.username}#${msg.member.discriminator}] ${reason}`)
+            await client.createMessage(msg.channel.id, ':thumbsup:')
+            await client.createMessage(config.modlogChannel, modlog)
+            .catch(err => {
+                if (err) return message.channel.send(`${error}An error has occured! Please contact boss with the error: ${err}`)
+            });
+        } catch (error) { 
+            member.kick(`[${msg.member.username}#${msg.member.discriminator}] ${reason}`) 
+            await client.createMessage(config.modlogChannel, modlog)
+        }
 
          schedule.scheduleJob(`mute_time_${member.id}`, date, function () {
              member.removeRole(muterole.id)

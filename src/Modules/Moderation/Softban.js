@@ -125,3 +125,5 @@ async execute(client, msg, args) {
 }
 }
 module.exports.cmd = Softban;
+
+// member.ban(7, `[${msg.member.username}#${msg.member.discriminator}] ${reason}`)).then(() => msg.channel.guild.unbanMember(member.id, 'Softban'))
