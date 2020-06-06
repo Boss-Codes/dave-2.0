@@ -33,7 +33,7 @@ async execute(client, msg, args) {
         return client.createMessage(msg.channel.id, `${userError}`)
     }
     if (config.staff.includes(member.id)) {
-        return client.createMessage(msg.channel.id, `${error}You cannot kick yourself!`)
+        return client.createMessage(msg.channel.id, `${error}You cannot mute yourself!`)
     }
 
     let reason = args.slice(1).join(' ');
