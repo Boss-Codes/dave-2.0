@@ -34,8 +34,8 @@ class Mute extends Command {
              return client.createMessage(msg.channel.id, `${userError}`)
          }
          if (config.staff.includes(member.id)) {
-             return client.createMessage(msg.channel.id, `${error}You cannot moderate staff!`)
-         }
+            return client.createMessage(msg.channel.id, `${error}You cannot moderate staff!`)
+        }
 
          let reason = args.slice(2).join(' ');
          if (!reason) {
