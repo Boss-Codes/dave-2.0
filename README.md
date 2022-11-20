@@ -1,2 +1,2 @@
-# Tik Toker Visionwise's Community Bot
-A bot for the Tik Toker visionwise's Discord community! 
+# Dave 2.0  
+This is just a bot I decided to develop to get back into coding.
