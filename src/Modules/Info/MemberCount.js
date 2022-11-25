@@ -1,8 +1,6 @@
 const { Command } = require('../../Core/Classes/Command.js'); 
 const { defaultColor, online, idle, dnd, offline } = require('../../Core/Utils/Global.js'); 
 const config = require('../../../config.json'); 
-const { totalmem } = require('os');
-const { truncate } = require('fs');
 
 class MemberCount extends Command {
     constructor(){
@@ -24,7 +22,7 @@ class MemberCount extends Command {
         let idleM = msg.channel.guild.members.filter(m => m.status === 'idle').length
         let dndM = msg.channel.guild.members.filter(m => m.status === 'dnd').length
         let presences = msg.channel.guild.maxPresences
-        
+
         const data = {
             embed: {
                 author: { 
