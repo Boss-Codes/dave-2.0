@@ -1,0 +1,23 @@
+{
+    "server ID": {
+        "channels": {
+              
+            "messagelogChannel": [""], 
+            "modlogChannel": [""], 
+            "serverLogChannel": [""],
+            "spammyLogChannel": [""],
+            "welcomeChannel": [""]
+        },
+        
+        "prefix": "",
+        
+        "serverOwner": "", 
+        
+        "roles": {
+            "serverManagers": [""], 
+            "serverMod": [""], 
+            "memberRole": ""
+        }
+        
+    }
+}
