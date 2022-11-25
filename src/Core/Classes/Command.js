@@ -4,6 +4,7 @@ class Command {
         this.id = this.name
         this.module = data.module
         this.aliases = data.aliases 
+        this.userPerms = data.userPerms
         this.helpDetail = data.helpDetail
         this.helpUsage = data.helpUsage
         this.helpExample = data.helpExample

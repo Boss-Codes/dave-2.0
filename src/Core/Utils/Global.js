@@ -4,9 +4,12 @@ global.modules = '1'
 global.success = '<:ffSuccess:1043785651914559519>'
 global.error = '<:ffError:1043785694969069627>'
 global.neutral = '<:ffNeutral:1043786253138657320>'
-global.idle = ''
-global.dnd = ''
-global.offline = ''
+// <:ffOnline:1043785771779371038><:ffYellow:1043785838720458862><:ffDnd:1043786201796190241><:ffOffline:1043785900745838714>
+
+global.online = '<:ffOnline:1043785771779371038>'
+global.idle = '<:ffYellow:1043785838720458862>'
+global.dnd = '<:ffDnd:1043786201796190241>'
+global.offline = '<:ffOffline:1043785900745838714>'
 global.defaultColor = 16772352
 global.userError = 'Invalid user!'
 global.roleError = 'Invalid role!'
@@ -23,7 +26,8 @@ module.exports = {
     prefix: global.prefix,
     success: global.success, 
     error: global.error, 
-    yneutral: global.yneutral, 
+    yneutral: global.neutral, 
+    online: global.online,
     idle: global.idle, 
     dnd: global.dnd, 
     offline: global.offline, 
