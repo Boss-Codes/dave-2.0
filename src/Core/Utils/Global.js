@@ -1,9 +1,9 @@
 const global = {}
 global.version = 'v1.0.0'
 global.modules = '1'
-global.success = ''
-global.error = ''
-global.yneutral = ''
+global.success = '<:ffSuccess:1043785651914559519>'
+global.error = '<:ffError:1043785694969069627>'
+global.neutral = '<:ffNeutral:1043786253138657320>'
 global.idle = ''
 global.dnd = ''
 global.offline = ''

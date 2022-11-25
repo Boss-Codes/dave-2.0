@@ -13,7 +13,7 @@ client.on('disconnect', async () => {
         embeds: [{
             color: `${red}`, 
 
-            description: `\`${logDate}  ${logTime}\` <@!1000884731094773771> [SHARD DISCONNECT] Shard: \`1\``
+            description: `\`${logDate}  ${logTime}\` <@!1000884731094773771> [DISCONNECTED] Shard: \`1\``
         }]
     
     

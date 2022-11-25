@@ -1,39 +1,28 @@
 {
-    "whitelisted users": 
-    { 
-        "developer": ["344954369285947392"], 
-        "owners": ["344954369285947392"], 
-        "admins": [], 
-        "staff": [], 
-        "helpers": []
-    },
+    "developer": ["344954369285947392"], 
+    "owners": ["344954369285947392"], 
+    "admins": [], 
+    "staff": [], 
+    "helpers": [],
     
-    "prefixes": { 
-        "prefix": ["!"],
-        "dev": ["$"]
-    },
+    "prefix": ["!"],
+    "devPrefix": ["$"],
 
     "whitelisted guilds": ["1043755488157913189"],
     
-    "channels": 
-    {
-        "messagelog": ["1043756437228245007"], 
-        "modlog": ["1043756356122984508"], 
-        "serverLog": ["1043756453200134184"],
-        "spammyLog": ["1043756533877583953"],
-        "whitelisted": [],
-        "clientLog": ["1043757211345764363"],
-        "dev": ["1043756212119949372"], 
-        "welcome": ["1043755587403513876"]
-    }, 
+    "messagelogChannel": ["1043756437228245007"], 
+    "modlogChannel": ["1043756356122984508"], 
+    "serverLogChannel": ["1043756453200134184"],
+    "spammyLogChannel": ["1043756533877583953"],
+    "whitelistedChannel": [],
+    "clientLogChannel": ["1043757211345764363"],
+    "devChannel": ["1043756212119949372"], 
+    "welcomeChannel": ["1043755587403513876"],
    
     "readyWebhook": ["V-M2sjc-gzrnDNV4jQMzGt1tr07dM-ex9C8KofqMqMM3DmZmCuDTTjZSg92gTDrqZ9Kl"], 
     
-    "roles":
-    {
-        "member": [],
-        "developer": ["1043755665933475840"],
-        "bot": ["1043784791490830416"]
-    }
+    "memberRole": [],
+    "devRole": ["1043755665933475840"],
+    "botRole": ["1043784791490830416"]
 
 }
