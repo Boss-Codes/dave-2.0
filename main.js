@@ -1,5 +1,5 @@
 /*
-* FairFight™ Jr. 
+* Metis
 * © 2022 Boss-Codes 
 */
 
@@ -43,7 +43,7 @@ readdirSync(`./src/Modules`).forEach(dir => {
     }
 
 });
-console.log(`[FairFight™ Jr.] [${logTime}] Loaded Commands`)
+console.log(`[Metis] [${logTime}] Loaded Commands`)
 
 /* Event Handler */ 
 const events = readdirSync(`./src/Events`).filter(file => file.endsWith('.js'))
@@ -51,7 +51,7 @@ for (let file of events) {
     const evt = require(`./src/Events/${file}`)
 };
 
-console.log(`[FairFight™ Jr.] [${logTime}] Loaded Events`)
+console.log(`[Metis] [${logTime}] Loaded Events`)
 
 
 /* Login */

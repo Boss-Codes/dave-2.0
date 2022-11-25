@@ -16,12 +16,11 @@ client.on('ready', async () => {
         embeds: [{
             color: `${green}`, 
 
-            description: `\`${logDate}  ${logTime}\` <@!1000884731094773771> [CONNECTED] Shard: \`1\``
+            description: `\`${logDate}  ${logTime}\` <@!564570881037303819> [CONNECTED] Shard: \`1\``
         }]
     
     
     })
-    console.log(`[FairFight™ Jr.] [${logTime}] Initializing Shard 1!`)
-    console.log(`[FairFight™ Jr.] [${logTime}] Shard 1 Initailized!`)
-    console.log(`[FairFight™ Jr.] [${logTime}] Shard 1 Connected!`)
+    console.log(`[Metis] [${logTime}] Initializing Shard 1!`)
+    console.log(`[Metis] [${logTime}] Shard 1 Connected to Discord!`)
 })
