@@ -1,7 +1,7 @@
-# Fair-Fight-Jr TM  
-This is just a bot I decided to develop to get back into coding.
+# Metis 
+Metis is a multi-purpose Discord bot that in currently in the development stages and might not work correctly. 
 
-## Contact Me??
-You can't. I will never like any of you so please do not contact me. 
+# Developer 
+boss#0001 on Discord 
 
-*Do not distribute this code. All code and assets belong to me*
+*Open source for your liking :)*
