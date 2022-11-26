@@ -16,7 +16,7 @@ client.on('ready', async () => {
         embeds: [{
             color: `${green}`, 
 
-            description: `\`${logDate}  ${logTime}\` <@!564570881037303819> [CONNECTED] Shard: \`1\``
+            description: `\`${logDate}  ${logTime}\` <@!${client.user.id}> [CONNECTED] Shard: \`1\``
         }]
     
     
