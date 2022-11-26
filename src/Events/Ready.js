@@ -21,6 +21,5 @@ client.on('ready', async () => {
     
     
     })
-    console.log(`[Metis] [${logTime}] Initializing Shard 1!`)
-    console.log(`[Metis] [${logTime}] Shard 1 Connected to Discord!`)
+    console.log(`[Metis] [${logTime}] Connected to Discord!`)
 })

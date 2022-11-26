@@ -7,11 +7,12 @@
 const { Client, Collection } = require('eris'); 
 const { Command } = require('./src/Core/Classes/Command.js'); 
 const { config } = require('dotenv'); 
+const { fs, readdir, readdirSync } = require('fs'); 
+const { mongoose } = require('mongoose');
 let date = new Date()
 let logDate = date.toLocaleDateString(); 
 let logTime = date.toLocaleTimeString('en-US',{timeZone:'America/New_York'})
 
-const { fs, readdir, readdirSync } = require('fs'); 
 config({
     path: __dirname + '/.env'
 });
@@ -31,6 +32,21 @@ module.exports.client = client;
 client.commands = new Collection(Command); 
 client.aliases = new Collection(); 
 client.events = new Collection(); 
+
+/*DB*/
+function db() {
+    mongoose.connect(process.env.MONGOLOGIN, { 
+        useNewUrlParser: true, 
+        useUnifiedTopology: true, 
+        dbName: 'metis'
+    });
+    mongoose.connection.on('error', () => {
+        console.log(`[Metis] [${logTime}] Failed to connect to MongoDB`)
+    });
+    mongoose.connection.on('open', () => {
+        console.log(`[Metis] [${logTime}] Connected to MongoDB`)
+    })
+}
 
 /*Command Handler */
 readdirSync(`./src/Modules`).forEach(dir => { 
@@ -53,6 +69,6 @@ for (let file of events) {
 
 console.log(`[Metis] [${logTime}] Loaded Events`)
 
-
 /* Login */
+db()
 client.connect()
