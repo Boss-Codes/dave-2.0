@@ -9,9 +9,8 @@ class Db extends Command {
         super({
             name: 'db', 
             module: "Dev",
-
-            helpDetail: 'Creates a db for the messaged server', 
-            helpUsage: `${config.prefix}db`, 
+            helpDetail: 'Creates/deletes a db entry for a server.', 
+            helpUsage: `db`, 
         });
     }
     

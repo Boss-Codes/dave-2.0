@@ -9,7 +9,7 @@ class MemberCount extends Command {
             module: 'Info', 
             userPerms: 'User', 
             helpDetail: 'Shows the amount of members in the server.\nUse the `full` option to show the status breakdown of all members.', 
-            helpUsage: `${config.prefix}membercount\n${config.prefix}membercount full`
+            helpUsage: `membercount\nmembercount full`
         })
     }
 
