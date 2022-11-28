@@ -27,7 +27,6 @@ client.on('guildCreate', async (guild) => {
                    icon_url: client.user.avatarURL
                }, 
                color: green,
-               //@ts-ignore
                description: `Added to a new guild!\n**Guild:** ${guild.name} (\`${guild.id})\`\n**Owner:** ${owner.username}#${owner.discriminator}\n**Members:** ${guild.members.size}\n**Guilds:** ${client.guilds.size}`,
                timestamp: new Date 
 

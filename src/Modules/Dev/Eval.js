@@ -9,8 +9,8 @@ class Eval extends Command {
             aliases: ['e', 'evaluate'], 
 
             helpDetail: 'Evaluates JavaScript Code', 
-            helpUsage: `${config.prefix}eval <code>`, 
-            helpExample: `${config.prefix}eval client.guilds.size`
+            helpUsage: `eval <code>`, 
+            helpExample: `eval client.guilds.size`
         });
     }
     

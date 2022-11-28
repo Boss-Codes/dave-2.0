@@ -2,7 +2,6 @@ const { Command } = require('../../Core/Classes/Command.js');
 const config = require('../../../config.json')
 const mongoose = require('mongoose')
 const Guild  = require('../../Models/Guild.js');
-const { modelName } = require('../../Models/Guild.js');
 const { success, error } = require('../../Core/Utils/Global.js');
 
 class Db extends Command { 
@@ -10,9 +9,8 @@ class Db extends Command {
         super({
             name: 'db', 
             module: "Dev",
-
-            helpDetail: 'Creates a db for the messaged server', 
-            helpUsage: `${config.prefix}db`, 
+            helpDetail: 'Creates/deletes a db entry for a server.', 
+            helpUsage: `db`, 
         });
     }
     

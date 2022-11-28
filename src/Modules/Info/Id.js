@@ -10,8 +10,8 @@ class Id extends Command {
             module: 'Info', 
             userperms: 'User', 
             helpDetail: 'Sends the ID of the user you provide/your ID if no user supplied.',
-            helpUsage: `${config.prefix}id\n${config.prefix}id [user]`, 
-            helpExample: `${config.prefix}id\n${config.prefix}id boss`
+            helpUsage: `id\nid [user]`, 
+            helpExample: `id\nid boss`
         })
     }
 
