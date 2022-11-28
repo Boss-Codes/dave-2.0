@@ -2,7 +2,6 @@ const { mongoose } = require('mongoose');
 
 const Moderation = new mongoose.Schema({
     _id: Shcmea.Types.ObjectId,
-    id: String,
     type: String,
     userId: String,
     username: String,

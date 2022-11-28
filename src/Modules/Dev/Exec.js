@@ -11,8 +11,8 @@ class Exec extends Command {
             aliases: ['ex', 'execute'], 
 
             helpDetail: 'Executes console code.', 
-            helpUsage: `${config.prefix}exec <code>`, 
-            helpExample: `${config.prefix}exec pm2 restart metis`
+            helpUsage: `exec <code>`, 
+            helpExample: `exec pm2 restart metis`
         });
     }
     

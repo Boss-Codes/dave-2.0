@@ -4,4 +4,4 @@ Metis is a multi-purpose Discord bot that in currently in the development stages
 # Developer 
 boss#0001 on Discord 
 
-*Open source for your liking :)*
+*Open source for your liking! :)*
