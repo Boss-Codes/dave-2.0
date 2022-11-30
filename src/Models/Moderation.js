@@ -7,6 +7,7 @@ const Moderation = new mongoose.Schema({
     username: String,
     moderatorID: String,
     moderatorUsername: String,
+    duration: String,
     reason: String,
     time: String
 })
