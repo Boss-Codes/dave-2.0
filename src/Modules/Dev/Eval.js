@@ -1,6 +1,7 @@
 const { Command } = require('../../Core/Classes/Command.js'); 
 const config = require('../../../config.json')
 const { prefix, error } = require('../../Core/Utils/Global.js')
+const { readdirSync } = require('fs')
 class Eval extends Command { 
     constructor(){
         super({
@@ -16,6 +17,7 @@ class Eval extends Command {
     
     async execute(client, msg, args) {
         if (!config.developer.includes(msg.author.id)) return;
+
         const content = msg.content.split(' ').slice(1).join(' ');
 
         const result = new Promise((resolve, reject) => resolve(eval(content)));
@@ -32,7 +34,8 @@ class Eval extends Command {
             err = err.toString();
 
             return client.createMessage(msg.channel.id, `\`\`\`js\n${err}\`\`\``);
-        });
+        })
+
     }
     }
 

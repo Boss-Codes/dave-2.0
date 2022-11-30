@@ -32,6 +32,7 @@ module.exports.client = client;
 client.commands = new Collection(Command); 
 client.aliases = new Collection(); 
 client.events = new Collection(); 
+client.modules = readdirSync('./src/Modules').length
 
 /*DB*/
 function db() {
@@ -57,7 +58,6 @@ readdirSync(`./src/Modules`).forEach(dir => {
         let CmdClass = new pull.cmd 
         client.commands.add(CmdClass)
     }
-
 });
 console.log(`[Metis] [${logTime}] Loaded Commands`)
 

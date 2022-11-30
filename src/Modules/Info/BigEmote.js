@@ -1,5 +1,5 @@
 const { Command } = require('../../Core/Classes/Command.js'); 
-const { error, red, defaultColor } = require('../../Core/Utils/Global.js'); 
+const { error, red, defaultColor, modules } = require('../../Core/Utils/Global.js'); 
 
 class BigEmote extends Command { 
     constructor() { 

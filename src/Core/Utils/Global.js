@@ -1,6 +1,5 @@
 const global = {}
 global.version = 'v1.0.0'
-global.modules = '2'
 global.success = '<:ffSuccess:1043785651914559519>'
 global.error = '<:ffError:1043785694969069627>'
 global.neutral = '<:ffNeutral:1043786253138657320>'
@@ -20,7 +19,6 @@ global.blue = 30719
 
 module.exports = { 
     version: global.version, 
-    modules: global.modules, 
     success: global.success, 
     error: global.error, 
     yneutral: global.neutral, 
