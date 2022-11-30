@@ -31,7 +31,7 @@ class Uptime extends Command {
                 color: defaultColor,
                 description: `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`,
                 footer: {
-                    text: `${client.user.username} | ${build} | PPID: ${process.ppid} | Cluster 0 | Shard ${msg.channel.guild.shard.id}`
+                    text: `${client.user.username} | ${build} | PPID: ${process.ppid} | Shard ${msg.channel.guild.shard.id}`
                 }
             }
         }

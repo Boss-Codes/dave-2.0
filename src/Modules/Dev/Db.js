@@ -2,7 +2,7 @@ const { Command } = require('../../Core/Classes/Command.js');
 const config = require('../../../config.json')
 const mongoose = require('mongoose')
 const Guild  = require('../../Models/Guild.js');
-const { success, error } = require('../../Core/Utils/Global.js');
+const { success, error, red, green } = require('../../Core/Utils/Global.js');
 
 class Db extends Command { 
     constructor(){
@@ -17,12 +17,22 @@ class Db extends Command {
     async execute(client, msg, args) {
         if (!config.developer.includes(msg.author.id)) return;
         if (!args[0]) { 
-            client.createMessage(msg.channel.id, `${error} Provide the subcommand \`create\` or \`delete\`!`)
+            client.createMessage(msg.channel.id, { 
+                embed: { 
+                    color: red, 
+                    description: `${error} Provide the subcommand \`create\` or \`delete\`!`
+                }
+            })
         }
         if (args[0] === 'create') {
             let entry = args[1]
             if (!args[1]) { 
-                client.createMessage(msg.channel.id, `${error} Provide a server to create an entry for!`)
+                client.createMessage(msg.channel.id, {
+                    embed: { 
+                        color: red, 
+                        description: `${error} Provide a server to create an entry for!`
+                    }
+                })
             } else {
                 let guildProfile = await Guild.findOne({ guildId: entry })
                 let server = client.guilds.get(entry)
@@ -37,12 +47,22 @@ class Db extends Command {
                     });
     
                     await guildProfile.save().catch(console.error); 
-                    await client.createMessage(msg.channel.id, `${success} Created entry for: ${guildProfile.guildName} (\`${guildProfile.guildId}\`)`)
+                    await client.createMessage(msg.channel.id, {
+                        embed: { 
+                            color: green, 
+                            description: `${success} Created entry for: ${guildProfile.guildName} (\`${guildProfile.guildId}\`)`
+                        }
+                    })
     
             
                 } else { 
                     await guildProfile.save().catch(console.error); 
-                    await client.createMessage(msg.channel.id, `${error} A db entry already exists for this server. DB ID: \`${guildProfile._id}\``)
+                    await client.createMessage(msg.channel.id, {
+                        embed: { 
+                            color: red, 
+                            description: `${error} A db entry already exists for this server. DB ID: \`${guildProfile._id}\``
+                        }
+                    })
     
                 }
             } 
@@ -51,14 +71,29 @@ class Db extends Command {
         if (args[0] === 'delete') {
             let server = args[1]
             if (!args[1]) { 
-                client.createMessage(msg.channel.id, `${error} Provide a server to delete an entry for.`)
+                client.createMessage(msg.channel.id, {
+                    embed: { 
+                        color: red, 
+                        description: `${error} Provide a server to delete an entry for.`
+                    }
+                })
             }
             let guildProfile = await Guild.findOne({ guildId: server })
             if (guildProfile) { 
                 guildProfile.deleteOne()
-                await client.createMessage(msg.channel.id, `${success} Successfully deleted database entry for server: \`${args[1]}\``)
+                await client.createMessage(msg.channel.id, {
+                    embed: {
+                        color: green, 
+                        description: `${success} Successfully deleted database entry for server: ${client.guilds.get(args[1]).name} (\`${args[1]}\`)`
+                    }
+                })
             } else { 
-                client.createMessage(msg.channel.id, `${error} Server does not exist in database!`)
+                client.createMessage(msg.channel.id, {
+                    embed: {
+                        color: red, 
+                        description: `${error} Server does not exist in database!`
+                    }
+                })
             }
         }
         

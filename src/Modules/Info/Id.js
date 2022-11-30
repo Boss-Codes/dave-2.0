@@ -1,7 +1,5 @@
 const { Command } = require('../../Core/Classes/Command.js'); 
-const { defaultColor } = require('../../Core/Utils/Global.js'); 
 const { resolveUser } = require('../../Core/Utils/Resolvers.js'); 
-const config = require('../../../config.json'); 
 
 class Id extends Command { 
     constructor(){

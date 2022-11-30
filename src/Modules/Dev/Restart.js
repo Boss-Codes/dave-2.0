@@ -1,6 +1,6 @@
 const { Command } = require('../../Core/Classes/Command.js'); 
 const config = require('../../../config.json')
-const { success, green } = require('../../Core/Utils/Global.js')
+const { success, green, blue } = require('../../Core/Utils/Global.js')
 const { exec } = require('child_process')
 const { inspect } = require('util')
 let date = new Date()
@@ -22,9 +22,19 @@ class Restart extends Command {
     async execute(client, msg, args) {
         if (!config.developer.includes(msg.author.id)) return;
         
-        client.createMessage(msg.channel.id, `<a:mGear:1046881466015039589> Restarting Metis!`).then(message => {
-            exec('pm2 restart Metis', (error, stdout) => {
-            })
+        // client.createMessage(msg.channel.id, `<a:mGear:1046881466015039589> Restarting Metis!`).then(message => {
+        //     exec('pm2 restart Metis', (error, stdout) => {
+        //     })
+        //     message.edit(`${success} Restarted! `)
+        // })
+
+        let m = await client.createMessage(msg.channel.id, { 
+            embed: {
+                color: blue, 
+                description: '<a:mGear:1046881466015039589> Restarting Metis!'
+            }
+        })
+        exec('pm2 restart Metis', (error, stdout) => { 
         })
 
 
