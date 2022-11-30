@@ -47,6 +47,7 @@ class Db extends Command {
                     });
     
                     await guildProfile.save().catch(console.error); 
+                    console.log(guildProfile.tags)
                     await client.createMessage(msg.channel.id, {
                         embed: { 
                             color: green, 

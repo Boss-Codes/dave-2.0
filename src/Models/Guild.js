@@ -40,6 +40,12 @@ const guildSchema = new Schema({
     modRoles: {
         type: Array, 
         default: []
-    }
+    }, 
+    tags: [{
+        name: String,
+        content: String,
+        createdBy: String,
+        timestamp: String
+    }]
 })
 module.exports = model('Guild', guildSchema, 'guilds')
