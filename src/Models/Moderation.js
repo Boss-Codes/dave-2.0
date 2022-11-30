@@ -3,6 +3,8 @@ const { mongoose } = require('mongoose');
 const Moderation = new mongoose.Schema({
     _id: Shcmea.Types.ObjectId,
     type: String,
+    guildId: String,
+    guildName: String,
     userId: String,
     username: String,
     moderatorID: String,
