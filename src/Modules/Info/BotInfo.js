@@ -6,10 +6,10 @@ class BotInfo extends Command {
         super({
             name: 'bot-info', 
             module: 'Info', 
-            aliases: ['info', 'botinfo', 'stats', 'bot-information'], 
+            aliases: ['botinfo', 'stats', 'bot-information'], 
             userPerms: 'User',
             helpDetail: 'Gives statistics and information on the bot.', 
-            helpUsage: 'botinfo'
+            helpUsage: 'bot-info'
         })
     }
 
