@@ -8,10 +8,6 @@ global.idle = '<:ffYellow:1043785838720458862>'
 global.dnd = '<:ffDnd:1043786201796190241>'
 global.offline = '<:ffOffline:1043785900745838714>'
 global.defaultColor = 14356496
-global.userError = 'Invalid user!'
-global.roleError = 'Invalid role!'
-global.noUser = 'Provide a user!'
-global.noRole = 'Provide a role!'
 global.red = 16711680
 global.yellow = 16770560
 global.green = 1441536
@@ -27,10 +23,6 @@ module.exports = {
     dnd: global.dnd, 
     offline: global.offline, 
     defaultColor: global.defaultColor, 
-    userError: global.userError, 
-    roleError: global.roleError, 
-    noUser: global.noUser, 
-    noRole: global.noRole, 
     red: global.red, 
     yellow: global.yellow, 
     green: global.green, 
