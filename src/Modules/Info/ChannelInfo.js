@@ -17,6 +17,9 @@ class ChannelInfo extends Command {
 
     async execute(client, msg, args) {  
         let channel = msg.member.guild.channels.get(args[0]) || msg.member.guild.channels.find(c => c.name === args[0]);
+        if (!channel && msg.channelMentions && msg.channelMentions[0]) { 
+            channel = msg.channel.guild.channels.get(msg.channelMentions[0])
+        }
         if (!channel) channel = msg.member.guild.channels.get(msg.channel.id)
         let perms = channel.permissionOverwrites.filter(c => c.id != msg.member.guild.id).map(c => c.id)
         let r1 = []
