@@ -85,6 +85,10 @@ const guildSchema = new Schema({
         default: 0,
         required: true,
         unique: true
+    }, 
+    blacklisted: { 
+        type: Boolean, 
+        default: false
     }
 })
 

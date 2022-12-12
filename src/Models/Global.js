@@ -17,4 +17,4 @@ const globalSchema = new Schema({
         timeStamp: String
     }]
 })
-module.exports = model('Global', globalSchema, 'globalDB')
+module.exports = model('GlobalDB', globalSchema, 'globalDB')
