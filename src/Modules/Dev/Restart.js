@@ -34,7 +34,7 @@ class Restart extends Command {
                 description: '<a:mGear:1046881466015039589> Restarting Metis!'
             }
         })
-        client.createMessage(config.clientLogChannel, {
+        client.executeWebhook('1043789410006740995', process.env.READYWEBHOOK, {
             embed: { 
                 color: blue, 
                 description: `\`${logDate}  ${logTime}\` <@!${client.user.id}> [RESTART] Shard: \`all\`\nInitiated by: \`${msg.author.username}#${msg.author.discriminator}\``

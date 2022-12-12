@@ -63,7 +63,7 @@ class Embeds extends Command {
                 }, 
                 {
                     name: 'Support Guidelines', 
-                    value: 'If you would like to provide Metis support to other in our support channels, please see the pins in #support for some resources and guidelines on doing so.'
+                    value: 'If you would like to provide Metis support to other in our support channels, please see the pins in <#1045616349545775164> for some resources and guidelines on doing so.'
                 }],
                 footer: {
                     text: 'Revised 11-25-2022 @ 3:45 A.M.'
@@ -156,15 +156,15 @@ class Embeds extends Command {
         // rules channel 
         client.createMessage('1045611229282054205', welcome)
         client.createMessage('1045611229282054205', rules)
-        // support channel 
-        client.createMessage('1045616349545775164', supportGuide)
-        // faq channel 
-        client.createMessage('1045614500029665290', links)
-        client.createMessage('1045614500029665290', roles)
-        // self-assign roles 
-        client.createMessage('1045614519164092476', selfAssign)
-        // status channel 
-        client.createMessage('1045614099184238632', status)
+        // // support channel 
+        // client.createMessage('1045616349545775164', supportGuide)
+        // // faq channel 
+        // client.createMessage('1045614500029665290', links)
+        // client.createMessage('1045614500029665290', roles)
+        // // self-assign roles 
+        // client.createMessage('1045614519164092476', selfAssign)
+        // // status channel 
+        // client.createMessage('1045614099184238632', status)
         return client.createMessage(msg.channel.id, ':thumbsup:')
     }
 }

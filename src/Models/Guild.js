@@ -11,17 +11,14 @@ const guildSchema = new Schema({
     guildName: { 
         type: String,
         required: true,
-        unique: true
     },
     ownerId: { 
         type: String,
         required: true,
-        unique: true
     },
     owner: {
         type: String,
         required: true,
-        unique: true
     },
     prefix: {
         type: String,
