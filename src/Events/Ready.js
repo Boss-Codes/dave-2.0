@@ -7,11 +7,11 @@ let logDate = date.toLocaleDateString();
 let logTime = date.toLocaleTimeString('en-US',{timeZone:'America/New_York'})
 client.on('ready', async () => { 
     client.editStatus('online', {
-        name: 'in the beta stages',
-        type: 5
+        name: `!help | ${client.guilds.size} guilds `,
+        type: 0
     })
 
-    client.executeWebhook('1043789410006740995', config.readyWebhook, {
+    client.executeWebhook('1043789410006740995', process.env.READYWEBHOOK, {
 
         embeds: [{
             color: `${green}`, 

@@ -12,7 +12,7 @@ client.on('guildDelete', async (guild) => {
     let model = Guild.findOne({ guildId: guild.id });
     await model.deleteOne()
 
-    client.executeWebhook('1045940849202176010', config.guildWebhook, {
+    client.executeWebhook('1045940849202176010', process.env.GUILDWEBHOOK, {
 
         embeds: [{
                author: { 

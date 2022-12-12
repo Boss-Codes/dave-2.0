@@ -41,7 +41,7 @@ class BotInfo extends Command {
                 { name: 'Servers', value: client.guilds.size, inline: true }, 
                 { name: 'Users', value: client.users.size, inline: true }, 
                 { name: 'Modules', value: client.modules, inline: true },
-                { name: 'Bot Invite', value: `[Click Here](https://discord.com/api/oauth2/authorize?client_id=564472435336806450&permissions=8&scope=bot)`, inline: true }, 
+                { name: 'Bot Invite', value: `[Click Here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`, inline: true }, 
                 { name: 'Support Server Invite', value: '[Click Here](https://discord.gg/mePghx6dQy)', inline: true }, 
                 { name: 'Github Repo', value: '[Repo-Link](https://github.com/Boss-Codes/metis) ', inline: true }
             ]
