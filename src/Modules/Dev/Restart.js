@@ -34,6 +34,12 @@ class Restart extends Command {
                 description: '<a:mGear:1046881466015039589> Restarting Metis!'
             }
         })
+        client.createMessage(config.clientLogChannel, {
+            embed: { 
+                color: blue, 
+                description: `\`${logDate}  ${logTime}\` <@!${client.user.id}> [RESTART] Shard: \`all\`\nInitiated by: \`${msg.author.username}#${msg.author.discriminator}\``
+            }
+        })
         exec('pm2 restart Metis', (error, stdout) => { 
         })
 
