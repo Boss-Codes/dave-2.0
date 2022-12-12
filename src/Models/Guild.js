@@ -75,8 +75,7 @@ const guildSchema = new Schema({
     mid: { 
         type: Number, 
         default: 0,
-        required: true,
-        unique: true
+        required: true    
     }, 
     blacklisted: { 
         type: Boolean, 
