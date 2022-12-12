@@ -1,13 +1,27 @@
-const { Schema, model } = require('mongoose'); 
+const { Schema, model } = require('mongoose');
+
 
 const guildSchema = new Schema({
     _id: Schema.Types.ObjectId,
-    guildId: String,
-    guildName: String,
-    ownerId: String,
+    guildId: { 
+        type: String, 
+        required: true, 
+        unique: true
+    },
+    guildName: { 
+        type: String,
+        required: true,
+        unique: true
+    },
+    ownerId: { 
+        type: String,
+        required: true,
+        unique: true
+    },
     owner: {
         type: String,
-        default: 'Could not fetch.',
+        required: true,
+        unique: true
     },
     prefix: {
         type: String,
@@ -46,6 +60,35 @@ const guildSchema = new Schema({
         content: String,
         createdBy: String,
         timestamp: String
-    }]
+    }],
+    warnings: [{
+         _id: Schema.Types.ObjectId,
+         case: String,
+         userId: String,
+         username: String,
+         moderatorID: String,
+         moderatorUsername: String,
+         reason: String,
+         time: String
+    }], 
+    moderations: [{
+        _id: Schema.Types.ObjectId,
+        case: String,
+        type: String,
+        userId: String,
+        username: String,
+        moderatorID: String,
+        moderatorUsername: String,
+        duration: String,
+        reason: String,
+        time: String
+    }],
+    mid: { 
+        type: Number, 
+        default: 0,
+        required: true,
+        unique: true
+    }
 })
+
 module.exports = model('Guild', guildSchema, 'guilds')
