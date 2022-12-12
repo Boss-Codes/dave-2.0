@@ -5,3 +5,7 @@ Metis is a multi-purpose Discord bot that in currently in the development stages
 boss#0001 on Discord!!
 
 *Open source for your liking! :)*
+
+# How to start?? 
+
+Coming soon to a theater near you! 
