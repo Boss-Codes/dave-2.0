@@ -14,10 +14,7 @@
     "whitelistedChannel": [],
     "clientLogChannel": ["1043757211345764363"],
     "devChannel": ["1043756212119949372"], 
-    "welcomeChannel": ["1043755587403513876"],
-   
-    "readyWebhook": ["V-M2sjc-gzrnDNV4jQMzGt1tr07dM-ex9C8KofqMqMM3DmZmCuDTTjZSg92gTDrqZ9Kl"], 
-    "guildWebhook": ["CEO4W2dS6IbFtR13H8OQ9rA3ukg6eFAui-JM773ZQcA6LaSvpjT4eNgz9o-8sIMR5W6J"]
+    "welcomeChannel": ["1043755587403513876"]
     
 
 }

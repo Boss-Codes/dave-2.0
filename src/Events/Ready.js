@@ -11,7 +11,7 @@ client.on('ready', async () => {
         type: 5
     })
 
-    client.executeWebhook('1043789410006740995', config.readyWebhook, {
+    client.executeWebhook('1043789410006740995', process.env.READYWEBHOOK, {
 
         embeds: [{
             color: `${green}`, 

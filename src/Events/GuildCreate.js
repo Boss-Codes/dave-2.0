@@ -19,7 +19,7 @@ client.on('guildCreate', async (guild) => {
 
     await guildModel.save().catch(console.error)
 
-    client.executeWebhook('1045940849202176010', config.guildWebhook, {
+    client.executeWebhook('1045940849202176010', process.env.GUILDWEBHOOK, {
 
         embeds: [{
                author: { 
