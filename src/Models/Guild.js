@@ -71,16 +71,7 @@ const guildSchema = new Schema({
         duration: String,
         reason: String,
         time: String
-    }],
-    mid: { 
-        type: Number, 
-        default: 0,
-        required: true    
-    }, 
-    blacklisted: { 
-        type: Boolean, 
-        default: false
-    }
+    }]
 })
 
 module.exports = model('Guild', guildSchema, 'guilds')
