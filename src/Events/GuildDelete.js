@@ -22,7 +22,7 @@ client.on('guildDelete', async (guild) => {
                 }, 
                 color: red,
                 //@ts-ignore
-                description: `Removed from a new guild!\n**Guild:** ${guild.name} (\`${guild.id})\`\n**Owner:** ${owner.username}#${owner.discriminator}\n**Members:** ${guild.members.size}\n**Guilds:** ${client.guilds.size}`,
+                description: `**Guild:** ${guild.name} (\`${guild.id})\`\n**Owner:** ${owner.username}#${owner.discriminator}\n**Members:** ${guild.members.size}\n**Guilds:** ${client.guilds.size}`,
                 timestamp: new Date 
 
                 }]
@@ -39,7 +39,7 @@ client.on('guildDelete', async (guild) => {
                 }, 
                 color: red,
                 //@ts-ignore
-                description: `Removed from a new guild!\n**Guild:** ${guild.name} (\`${guild.id})\`\n**Owner:** ${owner.username}#${owner.discriminator}\n**Members:** ${guild.members.size}\n**Guilds:** ${client.guilds.size}`,
+                description: `**Guild:** ${guild.name} (\`${guild.id})\`\n**Owner:** ${owner.username}#${owner.discriminator}\n**Members:** ${guild.members.size}\n**Guilds:** ${client.guilds.size}`,
                 timestamp: new Date 
 
                 }]
