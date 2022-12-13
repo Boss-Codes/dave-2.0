@@ -1,0 +1,31 @@
+{
+  "name": "metis",
+  "version": "1.0.0",
+  "description": "A multi-purpose Discord bot ",
+  "main": "main.js",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "dotenv": "^16.0.3",
+    "eris": "^0.17.1",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.4",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.4",
+    "pm2": "^5.2.2",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "pm2 restart Metis"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boss-Codes/metis.git"
+  },
+  "author": "boss#0001",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Boss-Codes/metis/issues"
+  },
+  "homepage": "https://github.com/Boss-Codes/metis#readme"
+}
