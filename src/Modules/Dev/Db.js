@@ -43,8 +43,6 @@ class Db extends Command {
                     _id: mongoose.Types.ObjectId(), 
                     guildId: server.id, 
                     guildName: server.name, 
-                    ownerId: server.ownerID, 
-                    owner: `${owner.username}#${owner.discriminator}`
                 }); 
 
                 await guildProfile.save().catch(console.error); 
