@@ -7,7 +7,7 @@ class Eval extends Command {
         super({
             name: 'eval', 
             module: "Dev", 
-            aliases: ['e', 'evaluate'], 
+            aliases: ['evaluate', 'e'], 
 
             helpDetail: 'Evaluates JavaScript Code', 
             helpUsage: `eval <code>`, 

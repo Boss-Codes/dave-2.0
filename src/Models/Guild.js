@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, trusted } = require('mongoose');
 
 
 const guildSchema = new Schema({
@@ -11,6 +11,14 @@ const guildSchema = new Schema({
     guildName: { 
         type: String,
         required: true,
+    },
+    ownerId: { 
+        type: String,
+        required: true
+    }, 
+    owner: { 
+        type: String,
+        required: true
     },
     prefix: {
         type: String,

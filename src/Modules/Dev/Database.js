@@ -6,14 +6,15 @@ const Global = require('../../Models/Global.js');
 const User = require('../../Models/User.js'); 
 const { success, error, red, green } = require('../../Core/Utils/Global.js');
 
-class Db extends Command { 
+class Database extends Command { 
     constructor(){
         super({
-            name: 'db', 
+            name: 'database', 
             module: "Dev",
+            aliases: ['db'],
             userPerms: 'Dev',
             helpDetail: 'Creates/deletes a db entry for a server/user/global.', 
-            helpUsage: `db <create | delete> <server | user | global> [user ID | server ID]`,
+            helpUsage: `database <create | delete> <server | user | global> [user ID | server ID]`,
         });
     }
     
@@ -43,6 +44,8 @@ class Db extends Command {
                     _id: mongoose.Types.ObjectId(), 
                     guildId: server.id, 
                     guildName: server.name, 
+                    ownerId: server.ownerID, 
+                    owner: `${owner.username}#${owner.discriminator}`
                 }); 
 
                 await guildProfile.save().catch(console.error); 
@@ -139,4 +142,4 @@ class Db extends Command {
 
     }
 };
-module.exports.cmd = Db;
+module.exports.cmd = Database;

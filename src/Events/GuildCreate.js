@@ -13,6 +13,8 @@ client.on('guildCreate', async (guild) => {
         _id: mongoose.Types.ObjectId(),
         guildId: guild.id, 
         guildName: guild.name, 
+        ownerId: guild.ownerID, 
+        owner: `${owner.username}#${owner.discriminator}`
     })
 
     await guildModel.save().catch(console.error)

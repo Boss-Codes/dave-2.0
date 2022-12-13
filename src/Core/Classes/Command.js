@@ -3,7 +3,7 @@ class Command {
         this.name = data.name || 'unnamed'
         this.id = this.name
         this.module = data.module || 'default'
-        this.aliases = data.aliases || 'None'
+        this.aliases = data.aliases 
         this.userPerms = data.userPerms || 'User'
         this.helpDetail = data.helpDetail || 'Some waz lazy!! :('
         this.helpUsage = data.helpUsage 
