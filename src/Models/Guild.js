@@ -5,11 +5,9 @@ const guildSchema = new Schema({
     _id: Schema.Types.ObjectId,
     guildId: { 
         type: String, 
-        required: true, 
     },
     guildName: { 
         type: String,
-        required: true,
     },
     prefix: {
         type: String,
