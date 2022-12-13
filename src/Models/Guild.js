@@ -6,7 +6,6 @@ const guildSchema = new Schema({
     guildId: { 
         type: String, 
         required: true, 
-        unique: true
     },
     guildName: { 
         type: String,
