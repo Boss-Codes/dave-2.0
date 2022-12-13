@@ -3,12 +3,15 @@ const Guild = require('../Models/Guild.js');
 
 client.on('messageCreate', async msg => {
 
+                let prefix = '!'
+
                 let guildProfile = await Guild.findOne({ guildId: msg.channel.guild.id})
                 if (client.user.id == '564570881037303819') { 
                     prefix = '.'
-                } else { 
-                    prefix = guildProfile.prefix
                 }
+                // } else { 
+                //     prefix = guildProfile.prefix
+                // }
                 let devPrefix = '$'
 
 

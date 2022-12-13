@@ -7,6 +7,8 @@ const Guild = require('../Models/Guild.js');
 
 client.on('guildCreate', async (guild) => { 
   
+    let owner = client.users.get(guild.ownerID); 
+
     let guildModel = new Guild({
         _id: mongoose.Types.ObjectId(),
         guildId: guild.id, 
@@ -34,7 +36,7 @@ client.on('guildCreate', async (guild) => {
         })
     } else { 
         client.executeWebhook('1052339155083989042', process.env.GUILDWEBHOOKALPHA, { 
-            embeds: [{
+               embeds: [{
                 author: { 
                     name: 'Guild Create', 
                     icon_url: client.user.avatarURL
