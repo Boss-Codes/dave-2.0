@@ -1,8 +1,5 @@
-const eris = require('eris'); 
 const { client } = require('../../main.js'); 
-const { defaultColor, red } = require('../Core/Utils/Global.js'); 
-const config = require('../../config.json'); 
-const mongoose = require('mongoose'); 
+const { red } = require('../Core/Utils/Global.js'); 
 const Guild = require('../Models/Guild.js'); 
 
 client.on('guildDelete', async (guild) => { 
@@ -17,13 +14,13 @@ client.on('guildDelete', async (guild) => {
 
             embeds: [{
                 author: { 
-                    name: 'Guild Delete', 
+                    name: 'Removed', 
                     icon_url: client.user.avatarURL
                 }, 
                 color: red,
-                //@ts-ignore
-                description: `**Guild:** ${guild.name} (\`${guild.id})\`\n**Owner:** ${owner.username}#${owner.discriminator}\n**Members:** ${guild.members.size}\n**Guilds:** ${client.guilds.size}`,
-                timestamp: new Date 
+                description: `**ID:** \`${guild.id}\`\n**Name:** \`${guild.name}\`\n**Members:** \`${guild.members.size}\`\n**Owner:** \`${owner.username}#${owner.discriminator}\``,
+                timestamp: new Date, 
+                footer: { text: `Total Guilds: ${client.guilds.size}` }
 
                 }]
         
@@ -34,13 +31,13 @@ client.on('guildDelete', async (guild) => {
         client.executeWebhook('1052339155083989042', process.env.GUILDWEBHOOKALPHA, { 
             embeds: [{
                 author: { 
-                    name: 'Guild Delete', 
+                    name: 'Removed', 
                     icon_url: client.user.avatarURL
                 }, 
                 color: red,
-                //@ts-ignore
-                description: `**Guild:** ${guild.name} (\`${guild.id})\`\n**Owner:** ${owner.username}#${owner.discriminator}\n**Members:** ${guild.members.size}\n**Guilds:** ${client.guilds.size}`,
-                timestamp: new Date 
+                description: `**ID:** \`${guild.id}\`\n**Name:** \`${guild.name}\`\n**Members:** \`${guild.members.size}\`\n**Owner:** \`${owner.username}#${owner.discriminator}\``,
+                timestamp: new Date, 
+                footer: { text: `Total Guilds: ${client.guilds.size}` }
 
                 }]
         })

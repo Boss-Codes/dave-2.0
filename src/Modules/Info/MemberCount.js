@@ -1,7 +1,6 @@
 const { Command } = require('../../Core/Classes/Command.js'); 
 const { defaultColor, online, idle, dnd, offline } = require('../../Core/Utils/Global.js'); 
 const config = require('../../../config.json'); 
-
 class MemberCount extends Command {
     constructor(){
         super({
