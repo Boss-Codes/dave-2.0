@@ -6,10 +6,17 @@ let date = new Date()
 let logDate = date.toLocaleDateString(); 
 let logTime = date.toLocaleTimeString('en-US',{timeZone:'America/New_York'})
 client.on('ready', async () => { 
-    client.editStatus('online', {
-        name: `!help | ${client.guilds.size} guilds `,
-        type: 0
-    })
+    if (!client.user.id === '564570881037303819') { 
+        client.editStatus('online', {
+            name: `!help | ${client.guilds.size} guilds `,
+            type: 0
+        })
+    } else { 
+        client.editStatus('online', { 
+            name: 'Message me for help!', 
+            type: 0
+        })
+    }
 
     client.executeWebhook('1043789410006740995', process.env.READYWEBHOOK, {
 

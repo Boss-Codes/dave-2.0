@@ -23,7 +23,8 @@ const client = new Client(process.env.TOKEN, {
     autoreconnect: true, 
     defaultImageFormat: 'png', 
     defaultImageSize: 2048, 
-    intents: ['all']
+    intents: ['all'], 
+    allowedMentions: {everyone: false, roles: true, users: true}
 }); 
 
 module.exports.client = client; 
