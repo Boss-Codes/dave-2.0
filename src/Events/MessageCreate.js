@@ -35,12 +35,13 @@ client.on('messageCreate', async msg => {
 // real shit 
     if((msg.channel.type === 0 || msg.channel.type === 5)) {
         let guildProfile = await Guild.findOne({ guildId: msg.channel.guild.id})
+        let devPrefix = '>'
         if (client.user.id == '564570881037303819') { 
-            devPrefix = '.' && '-' && '>'
+            devPrefix = '>'
+            prefix = '-'
         } else { 
             prefix = guildProfile.prefix
         } 
-        let devPrefix = '>'
 
         if (msg.author.bot) return;
         if (msg.content.startsWith(devPrefix) && msg.author.id === "344954369285947392" ? prefix = devPrefix : prefix = prefix)

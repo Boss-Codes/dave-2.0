@@ -1,6 +1,6 @@
 const { Command } = require('../../Core/Classes/Command.js'); 
 const config = require('../../../config.json')
-const { prefix, error } = require('../../Core/Utils/Global.js')
+const { defaultColor } = require('../../Core/Utils/Global.js')
 const { readdirSync } = require('fs')
 class Eval extends Command { 
     constructor(){
@@ -26,14 +26,20 @@ class Eval extends Command {
             if (typeof output !== 'string') output = require('util').inspect(output, {
                 depth: 0
             });
-            if (output.length > 1990) console.log(output), output = 'The result of this eval is over 2000 characters long and cannot be sent, check the console for the output.'
-
-            return client.createMessage(msg.channel.id, `\`\`\`js\n${output}\`\`\``);
+            if (output.length > 1900) console.log(output), output = 'The result of this eval is over 2000 characters long and cannot be sent, check the console for the output.'
+            const data = { 
+                embed: { 
+                    author: { name: 'Eval Results', icon_url: msg.author.avatarURL }, 
+                    description: "```js\n" + output + "```", 
+                    color: defaultColor, 
+                    timeStamp: new Date()
+                }
+            }
+            return client.createMessage(msg.channel.id, data);
         }).catch(err => {
             console.error(err);
             err = err.toString();
-
-            return client.createMessage(msg.channel.id, `\`\`\`js\n${err}\`\`\``);
+            client.createMessage(msg.channel.id, `\`ERROR\` \`\`\`\n${err}\n\`\`\``);
         })
 
     }
