@@ -32,7 +32,7 @@ class Eval extends Command {
                     author: { name: 'Eval Results', icon_url: msg.author.avatarURL }, 
                     description: "```js\n" + output + "```", 
                     color: defaultColor, 
-                    timeStamp: new Date(),
+                    timestamp: new Date(),
                 }
             }
             return client.createMessage(msg.channel.id, data);
