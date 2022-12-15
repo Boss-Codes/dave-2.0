@@ -40,10 +40,13 @@ client.on('messageCreate', async msg => {
         } else { 
             prefix = guildProfile.prefix
         } 
+        if (!guildProfile && msg.author.id === '344954369285947392') { 
+            prefix = '>'
+        }
         let devPrefix = '>'
 
         if (msg.author.bot) return;
-        if (msg.content.startsWith(devPrefix) && msg.author.id === "344954369285947392" ? prefix = devPrefix : prefix = guildProfile.prefix && devPrefix)
+        if (msg.content.startsWith(devPrefix) && msg.author.id === "344954369285947392" ? prefix = devPrefix : prefix = prefix)
         if (!msg.content.startsWith(prefix)) return
         const messageArray = msg.content.split(' ')
         const commandName = messageArray[0]
