@@ -53,6 +53,9 @@ client.on('messageCreate', async msg => {
         if (commandName.length === 0) return;
         if (!command) return;
         if (command) command.execute(client, msg, args)
+        if (msg.content.startsWith(devPrefix) && msg.author.id === '344954369285947392') { 
+            command.execute(client, msg, args)
+        }
     }
 
 
