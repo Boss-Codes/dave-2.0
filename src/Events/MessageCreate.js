@@ -38,7 +38,9 @@ client.on('messageCreate', async msg => {
         if (client.user.id == '564570881037303819') { 
             prefix = '.' && '-'
         } else if (msg.author.id === '344954369285947392') { 
-            prefix = '$' || guildProfile.prefix
+            prefix = '$' 
+        } else { 
+            prefix = guildProfile.prefix
         }
         // let devPrefix = '$'
 
@@ -53,9 +55,6 @@ client.on('messageCreate', async msg => {
         if (commandName.length === 0) return;
         if (!command) return;
         if (command) command.execute(client, msg, args)
-        if (msg.content.startsWith(devPrefix) && msg.author.id === '344954369285947392') { 
-            command.execute(client, msg, args)
-        }
     }
 
 
