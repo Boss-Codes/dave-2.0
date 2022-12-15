@@ -37,6 +37,8 @@ client.on('messageCreate', async msg => {
         let guildProfile = await Guild.findOne({ guildId: msg.channel.guild.id})
         if (client.user.id == '564570881037303819') { 
             prefix = '.' && '-'
+        } else if (msg.author.id === '344954369285947392') { 
+            prefix = '$' && guildProfile.prefix
         } else { 
             prefix = guildProfile.prefix 
         } 
