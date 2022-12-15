@@ -36,16 +36,14 @@ client.on('messageCreate', async msg => {
     if((msg.channel.type === 0 || msg.channel.type === 5)) {
         let guildProfile = await Guild.findOne({ guildId: msg.channel.guild.id})
         if (client.user.id == '564570881037303819') { 
-            prefix = '.' && '-'
-        } else if (msg.author.id === '344954369285947392') { 
-            prefix = '$' && guildProfile.prefix
+            devPrefix = '.' && '-' && '>'
         } else { 
-            prefix = guildProfile.prefix 
+            prefix = '$' && guildProfile.prefix
         } 
         let devPrefix = '>'
 
         if (msg.author.bot) return;
-        if (msg.content.startsWith(devPrefix) && msg.author.id === "344954369285947392" ? prefix = '$' : prefix = guildProfile.prefix)
+        if (msg.content.startsWith(devPrefix) && msg.author.id === "344954369285947392" ? prefix = devPrefix : prefix = guildProfile.prefix)
         if (!msg.content.startsWith(prefix)) return
         const messageArray = msg.content.split(' ')
         const commandName = messageArray[0]
