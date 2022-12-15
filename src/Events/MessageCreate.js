@@ -38,7 +38,7 @@ client.on('messageCreate', async msg => {
         if (client.user.id == '564570881037303819') { 
             devPrefix = '.' && '-' && '>'
         } else { 
-            prefix = '$' && guildProfile.prefix
+            prefix = guildProfile.prefix
         } 
         let devPrefix = '>'
 
