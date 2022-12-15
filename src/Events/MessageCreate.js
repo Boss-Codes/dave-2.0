@@ -40,9 +40,6 @@ client.on('messageCreate', async msg => {
         } else { 
             prefix = guildProfile.prefix
         } 
-        if (!guildProfile && msg.author.id === '344954369285947392') { 
-            prefix = '>'
-        }
         let devPrefix = '>'
 
         if (msg.author.bot) return;
