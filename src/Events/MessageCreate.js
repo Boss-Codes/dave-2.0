@@ -38,7 +38,7 @@ client.on('messageCreate', async msg => {
         if (client.user.id == '564570881037303819') { 
             prefix = '.' && '-'
         } else if (msg.author.id === '344954369285947392') { 
-            prefix = '$' 
+            prefix = '$' && guildProfile.prefix
         } else { 
             prefix = guildProfile.prefix
         }
